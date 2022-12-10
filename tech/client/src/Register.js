@@ -27,7 +27,7 @@ const Register = () => {
           maxHeight: { xs: 110, md:250, xl: 250 },
           maxWidth: { xs: 110, md:250, xl: 250 },
         }}
-        alt="The house from the offer."
+        alt="techcarelogo"
         src={techcarelogo}
       />
             <Grid2 container justifyContent={'center'}>
