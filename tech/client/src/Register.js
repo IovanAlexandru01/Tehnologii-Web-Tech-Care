@@ -16,7 +16,7 @@ const Register = () => {
     }
 
     return (
-    <div>
+    <div className="register">
         
         <Box sx={{ flexGrow: 3, flexDirection:'column' }}>
             <Box
@@ -36,16 +36,16 @@ const Register = () => {
                     <Grid2 xs={12} md={12} xl={12} sx={{marginTop:"-3%"}}>
                         <label className="password">First name</label>
                         <Input sx={{marginLeft:'1%',color:'white',width:'28%'}} {...register('firstname', { required: true})}/>
-                        {errors.password && errors.password.type === "required" && <span style={{marginLeft:'3%',paddingTop:'-3%',color:'red',justifyContent:'center'}}><br/>First name is required!</span>}
+                        {errors.firstname && errors.firstname.type === "required" && <span style={{marginLeft:'3%',paddingTop:'-3%',color:'red',justifyContent:'center'}}><br/>First name is required!</span>}
                     </Grid2>
                     <Grid2 xs={12} md={12} xl={12} sx={{marginTop:"-3%"}}>
                             <label className="password">Last name</label>
                             <Input sx={{marginLeft:'1%',color:'white',width:'28%'}} {...register('lastname', { required: true})}/>
-                        {errors.password && errors.password.type === "required" && <span style={{marginLeft:'3%',paddingTop:'-3%',color:'red',justifyContent:'center'}}><br/>Last name is required!</span>}
+                        {errors.lastname && errors.lastname.type === "required" && <span style={{marginLeft:'3%',paddingTop:'-3%',color:'red',justifyContent:'center'}}><br/>Last name is required!</span>}
                     </Grid2>
                     <Grid2 xs={12} md={12} xl={12} sx={{marginTop:"-3%"}}>
                         <label className="email">Email</label>
-                        <Input sx={{marginLeft:'3%',width:'28%'}} {...register('email', { required: true})}/>
+                        <Input sx={{marginLeft:'3%',width:'28%',color:'white'}} {...register('email', { required: true})}/>
                         {errors.email && errors.email.type === "required" && <span style={{color:'red',justifyContent:'center',paddingTop:'-3%',marginLeft:'3%'}}><br/>E-mail is required!</span>}
                     </Grid2>
                     <Grid2 xs={12} md={12} xl={12} sx={{marginTop:"-3%"}}>

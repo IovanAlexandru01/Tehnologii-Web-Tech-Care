@@ -3,24 +3,6 @@
     src: local('AbrilFatface'), url(./fonts/AbrilFatface-Regular.ttf) format('opentype');
   }
   
-  body, html {
-    height: 100%;
-    margin: 0;
-  }
-
- .register {
-    background-image: url('./images/techcarewallpaper3.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    overflow: auto;
-    position: fixed;
-    min-width: 100%;
-    min-height: 100%;
-    background-attachment: fixed;
-    font-family: 'AbrilFatface';
-  }
-
   .email {
     color:white;
     font-size:130%;
@@ -38,10 +20,6 @@
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-  }
-  
-  .pagenotfound {
-    color:white;
   }
 
   .form {

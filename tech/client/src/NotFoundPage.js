@@ -1,6 +1,6 @@
 import Grid2 from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box';
-import './Register.css';
+// import './Register.css';
 import techcarelogo from './images/techcarelogo.png';
 
 

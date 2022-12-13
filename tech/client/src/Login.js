@@ -1,7 +1,7 @@
 import Grid2 from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box';
 import Input from '@mui/material/Input';
-import './Register.css';
+import './Login.css';
 import Button from '@mui/material/Button';
 import techcarelogo from './images/techcarelogo.png';
 import { useForm } from "react-hook-form";
@@ -16,7 +16,7 @@ const Login = () => {
     }
 
     return (
-    <div>
+    <div className="login">
         
         <Box sx={{ flexGrow: 3, flexDirection:'column' }}>
             <Box
@@ -35,7 +35,7 @@ const Login = () => {
                 <Grid2 mt={5} container spacing={15} sx={{mx:'auto',justifyContent:'center'}}>
                     <Grid2 xs={12} md={12} xl={12} sx={{marginTop:"-3%"}}>
                         <label className="email">Email</label>
-                        <Input sx={{marginLeft:'3%',width:'28%'}} {...register('email', { required: true})}/>
+                        <Input sx={{marginLeft:'3%',width:'28%',color:'white'}} {...register('email', { required: true})}/>
                         {errors.email && errors.email.type === "required" && <span style={{color:'red',justifyContent:'center',paddingTop:'-3%',marginLeft:'3%'}}><br/>E-mail is required!</span>}
                     </Grid2>
                     <Grid2 xs={12} md={12} xl={12} sx={{marginTop:"-3%"}}>
