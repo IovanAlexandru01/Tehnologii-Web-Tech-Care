@@ -3,11 +3,14 @@ import Login from './Login.js';
 import Register from './Register.js';
 import NotFoundPage from './NotFoundPage.js';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import {ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <ToastContainer position='top-center' />
         <Routes>
           <Route path='/' element={<Register />} />
           <Route path='/register' element={<Register />} />
