@@ -15,7 +15,9 @@ import ListItemText from "@mui/material/ListItemText";
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import InventoryIcon from '@mui/icons-material/Inventory';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { useState, useEffect } from 'react';
 import techcarelogo from './images/techcarelogo.png';
+import Axios from "axios";
 
 
 const drawerWidth = 240;
@@ -72,7 +74,15 @@ const Drawer = styled(MuiDrawer, {
 
 const MainPage = () => {
   const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [username, setUsername] = useState('');
+  const [noUseEffect, setNoUseEffect] = useState(0);
+
+  useEffect(() => {
+    Axios.get('http://localhost:5000/login').then((response) => {
+      setUsername(response.data.user[0].firstName + ' ' + response.data.user[0].firstName);
+    });
+  }, []);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -103,7 +113,7 @@ const MainPage = () => {
                 src={techcarelogo}
               >
                 </Box>
-               <p style={{marginRight:0,width:'100%',overflow:'hidden',fontSize:'90%'}}>Firstname username</p>
+               <p style={{marginRight:0,width:'100%',overflow:'hidden',fontSize:'90%'}}>{username}</p>
               <IconButton id="closeButton" onClick={handleDrawerClose}>
               <ChevronLeftIcon />
               </IconButton>
